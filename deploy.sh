@@ -1,2 +1,3 @@
-git checkout masterl
+git checkout master;
 git pull;
+# npm install;
