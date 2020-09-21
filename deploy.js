@@ -1,3 +1,4 @@
+console.log('测试自动化部署')
 const http = require('http');
 const {spawn} = require('child_process');
 const createHandler = require('github-webhook-handler');
