@@ -16,7 +16,7 @@ handler.on('error', (err) => {
     console.error('Error:', err.message);
 });
 handler.on('push', (event) => {
-    console.log('Received a push event for %s to %s', event.payload.repositpry.name, event.payload.ref);
+    console.log('Received a push event for %s to %s', event.payload.repository.name, event.payload.ref);
     runCommand('sh', ['./deploy.sh'], (txt) => {
         console.log(txt)
     });
