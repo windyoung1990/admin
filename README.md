@@ -1,2 +1,2 @@
 # admin
-a manager system
+## 增加自动化部署
