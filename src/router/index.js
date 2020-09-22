@@ -1,14 +1,22 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Login from '../pages/login/Login.vue';
-import Index from '../pages/index/Index.vue';
-import NotFound from '../pages/notFound/NotFound.vue';
+import Layout from "@/components/Layout"
+import Login from '../pages/login/Login';
+import Index from '../pages/index/Index';
+import NotFound from '../pages/notFound/NotFound';
 Vue.use(Router)
 const routes = [
     {
-        path: '/',
-        component: Index,
-        name: Index.name,
+        path: '/admin/:path?',
+        component: Layout,
+        name: Layout.name,
+        children: [
+            {
+                path: '/index',
+                component: Index,
+                name: Index.name,
+            }
+        ]
     },
     {
         path: '/login',

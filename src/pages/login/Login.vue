@@ -12,10 +12,8 @@
     </div>
 </template>
 <script>
-import http from '@/utils/http';
+// import http from '@/utils/http';
 import { mapGetters, mapActions } from 'vuex'
-
-// import {loginUrl} from './constants';
 export default {
     name: 'Login',
     data() {
@@ -63,8 +61,7 @@ export default {
                 password: this.password
             }
             this.saveUser(params).then(() => {
-        console.log(this.userInfo)
-
+                console.log(this.userInfo)
             })
         }
     }

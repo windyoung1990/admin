@@ -1,10 +1,10 @@
 <template>
     <div>
-          <router-link :to="{path: '/'}">toIndex</router-link>
-          <router-link :to="{path: 'login'}">toLogin</router-link>
+        <router-link :to="{path: '/admin/index'}">toIndex</router-link>
+        <router-link :to="{path: '/login'}">toLogin</router-link>
         <transition mode="out-in">
           <keep-alive>
-            <router-view></router-view>
+            <router-view :key="key"></router-view>
           </keep-alive>
         </transition>
     </div>
@@ -14,6 +14,11 @@
 
 export default {
   name: 'App',
+  computed: {
+    key() {
+      return this.$route.fullPath
+    }
+  },
 }
 </script>
 
