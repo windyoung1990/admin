@@ -12,12 +12,25 @@ const routes = [
         name: Layout.name,
         children: [
             {
-                path: '/index',
+                path: 'index',
                 component: Index,
-                name: Index.name,
+                // name: Index.name,
             }
         ]
     },
+    // {
+    //     path: '/index',
+    //     component: Index,
+    //     name: Index.name,
+    // },
+    // {
+    //     path: '/admin/:id',
+    //     component: Layout,
+    //     name: Layout.name,
+    //     children: [
+
+    //     ]
+    // },
     {
         path: '/login',
         component: Login,
@@ -35,6 +48,7 @@ const routes = [
         }
     }
 ]
+console.log(routes)
 const router = new Router({
     mode: 'history',
     routes,
@@ -48,4 +62,5 @@ const router = new Router({
       next()
     }
   })
+ console.log(router) 
 export default router

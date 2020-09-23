@@ -1,12 +1,15 @@
 <template>
     <div>
-        <router-link :to="{path: '/admin/index'}">toIndex</router-link>
-        <router-link :to="{path: '/login'}">toLogin</router-link>
+        <!-- <router-link :to="{path: '/admin/index'}">toIndex</router-link>
+        <router-link :to="{path: '/login'}">toLogin</router-link> -->
         <transition mode="out-in">
           <keep-alive>
             <router-view :key="key"></router-view>
           </keep-alive>
         </transition>
+        <!-- <div id="app">
+          <router-view :key="key"/>
+        </div> -->
     </div>
 </template>
 
@@ -27,7 +30,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
   margin-top: 60px;
 }
