@@ -17,7 +17,7 @@ app.post('/push', function(req, res) {
     handler(req,res, (err) => {
         console.log(err)
         res.statusCode = 200;
-        res.end("no such location");
+        res.end("good");
     });
     // res.statusCode = 404;
     // res.end("no such location");
