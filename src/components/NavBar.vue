@@ -22,7 +22,7 @@
                                     slot="dropdown"
                                     class="user-dropdown"
                                     >
-                                    <router-link to="/">
+                                    <router-link to="/admin/">
                                         <el-dropdown-item>我的主页</el-dropdown-item>
                                     </router-link>
                                     <el-dropdown-item>

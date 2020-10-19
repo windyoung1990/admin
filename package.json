@@ -13,8 +13,12 @@
   "main": "index.js",
   "dependencies": {
     "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "connect-history-api-fallback": "^1.6.0",
     "core-js": "^3.6.5",
     "element-ui": "^2.13.2",
+    "express": "^4.17.1",
     "github-webhook-handler": "^1.0.0",
     "vue": "^2.6.11",
     "vue-router": "^2.8.1",
