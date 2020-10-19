@@ -13,7 +13,6 @@ module.exports = {
       user : 'root',
       host : '62.234.27.149',
       ref  : 'origin/master',
-      key: '~/.ssh/id_rsa.pub',
       repo : 'https://github.com/windyoung1990/admin.git',
       path : '/home/project/admin',
       'pre-deploy-local': '',
