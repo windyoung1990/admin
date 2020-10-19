@@ -7,7 +7,7 @@ const app = express();
 const {spawn} = require('child_process');
 const createHandler = require('github-webhook-handler');
 const handler = createHandler({
-    path: '/push',
+    path: 'http://127.0.0.1:3000/push',
     secret: 'jianfeng19901009'
 });
 app.get('/', (req, res) => {
@@ -19,6 +19,8 @@ app.post('/push', function(req, res) {
         res.statusCode = 404;
         res.end("no such location");
     });
+    // res.statusCode = 404;
+    // res.end("no such location");
 })
 app.use(history({
     index: '/index.html'
