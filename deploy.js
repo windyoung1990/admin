@@ -13,7 +13,7 @@ const handler = createHandler({
 app.get('/', (req, res) => {
     res.redirect('/admin/index');
 });
-app.get('/push', function(req, res) {
+app.post('/push', function(req, res) {
     handler(req,res, (err) => {
         console.log(err)
         res.statusCode = 404;
