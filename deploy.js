@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 http.createServer(function (req, res) {
     handler(req, res, function (err) {
       res.statusCode = 404
-      res.end('no such location')
+      res.end('good')
     })
   }).listen(3010)
 app.use(history({
