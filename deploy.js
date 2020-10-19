@@ -13,15 +13,6 @@ const handler = createHandler({
 app.get('/', (req, res) => {
     res.redirect('/admin/index');
 });
-// app.post('/push', function(req, res) {
-//     handler(req,res, (err) => {
-//         console.log(err)
-//         res.statusCode = 200;
-//         res.end("good");
-//     });
-//     // res.statusCode = 404;
-//     // res.end("no such location");
-// })
 http.createServer(function (req, res) {
     handler(req, res, function (err) {
       res.statusCode = 404
@@ -52,21 +43,7 @@ app.use(function (req, res, next) {
 });
 
 
-// http.createServer((req, res) => {
-//     handler(req,res, (err) => {
-//         console.log(err)
-//         res.statusCode = 404;
-//         res.end("no such location");
-//     });
-// }).listen(3000);
 http.createServer(app).listen(3000);
-// app.get('/push', function(req, res) {
-//     handler(req,res, (err) => {
-//         console.log(err)
-//         res.statusCode = 404;
-//         res.end("no such location");
-//     });
-// })
 handler.on('error', (err) => {
     console.error('Error:', err.message);
 });
