@@ -7,21 +7,27 @@ const app = express();
 const {spawn} = require('child_process');
 const createHandler = require('github-webhook-handler');
 const handler = createHandler({
-    path: 'http://127.0.0.1:3000/push',
+    path: '/push',
     secret: 'jianfeng19901009'
 });
 app.get('/', (req, res) => {
     res.redirect('/admin/index');
 });
-app.post('/push', function(req, res) {
-    handler(req,res, (err) => {
-        console.log(err)
-        res.statusCode = 200;
-        res.end("good");
-    });
-    // res.statusCode = 404;
-    // res.end("no such location");
-})
+// app.post('/push', function(req, res) {
+//     handler(req,res, (err) => {
+//         console.log(err)
+//         res.statusCode = 200;
+//         res.end("good");
+//     });
+//     // res.statusCode = 404;
+//     // res.end("no such location");
+// })
+http.createServer(function (req, res) {
+    handler(req, res, function (err) {
+      res.statusCode = 404
+      res.end('no such location')
+    })
+  }).listen(3010)
 app.use(history({
     index: '/index.html'
 }));
