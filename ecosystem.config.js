@@ -3,9 +3,6 @@ module.exports = {
     script: './deploy.js',
     name: 'deploy',
     watch: './src'
-  }, {
-    script: './service-worker/',
-    watch: ['./service-worker']
   }],
 
   deploy : {
