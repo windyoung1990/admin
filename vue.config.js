@@ -5,6 +5,7 @@ function resolve(dir) {
 module.exports = {
     lintOnSave: false,
     publicPath: '/admin/',
+    assetDir: 'admin',
     chainWebpack: (config) => {
         config.resolve.alias = Object.assign(config.resolve.alias, {
             '@/src': resolve('src'),
