@@ -3,43 +3,44 @@ import Router from 'vue-router'
 import Layout from "@/components/Layout"
 import Login from '../pages/login/Login';
 import Index from '../pages/index/Index';
+import Show from '../pages/show/Show';
+
 import NotFound from '../pages/notFound/NotFound';
 Vue.use(Router)
 const routes = [
     {
-        path: '/admin/:path?',
-        component: Layout,
-        name: Layout.name,
-        children: [
-            {
-                path: 'index',
-                component: Index,
-                // name: Index.name,
-            }
-        ]
-    },
-    // {
-    //     path: '/index',
-    //     component: Index,
-    //     name: Index.name,
-    // },
-    // {
-    //     path: '/admin/:id',
-    //     component: Layout,
-    //     name: Layout.name,
-    //     children: [
-
-    //     ]
-    // },
-    {
-        path: '/login',
-        component: Login,
-        name: Login.name,
+      path: '/',
+      component: Layout,
+      name: Layout.name,
     },
     {
-        path: '/404',
-        component: NotFound,
-        name: NotFound.name,
+      path: '/admin',
+      component: Layout,
+      name: Layout.name,
+      children: [
+        {
+          path: 'index',
+          component: Index,
+          name: Index.name,
+        }   
+      ]
+    },
+    {
+      path: '/show',
+      component: Layout,
+      name: Layout.name,
+      children: [
+        {
+          path: 'index2',
+          component: Show,
+          name: Show.name,
+        }   
+      ]
+    },
+    {
+      path: '/404',
+      component: NotFound,
+      name: NotFound.name,
     },
     {
         path: '*',
